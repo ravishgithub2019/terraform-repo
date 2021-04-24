@@ -1,0 +1,1062 @@
+2021/04/04 07:23:05 [INFO] Terraform version: 0.14.9  
+2021/04/04 07:23:05 [INFO] Go runtime version: go1.15.6
+2021/04/04 07:23:05 [INFO] CLI args: []string{"/usr/bin/terraform", "apply"}
+2021/04/04 07:23:05 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2021/04/04 07:23:05 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/04/04 07:23:05 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/04/04 07:23:05 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2021/04/04 07:23:05 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2021/04/04 07:23:05 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2021/04/04 07:23:05 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2021/04/04 07:23:05 [INFO] CLI command args: []string{"apply"}
+2021/04/04 07:23:05 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021/04/04 07:23:05 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021/04/04 07:23:05 [DEBUG] New state was assigned lineage "123c1e52-ab16-97f2-b93b-1a1926d7c5ca"
+2021/04/04 07:23:05 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021/04/04 07:23:05 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021/04/04 07:23:05 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021/04/04 07:23:05 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2021/04/04 07:23:05 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/google v3.5.0 for linux_amd64 at .terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64
+2021/04/04 07:23:05 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/google 3.5.0
+2021/04/04 07:23:05 [DEBUG] checking for provisioner in "."
+2021/04/04 07:23:05 [DEBUG] checking for provisioner in "/usr/bin"
+2021/04/04 07:23:05 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021/04/04 07:23:05 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021/04/04 07:23:05 [INFO] backend/local: starting Apply operation
+2021/04/04 07:23:05 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/04/04 07:23:05 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021/04/04 07:23:05 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: existing snapshot has lineage "47639f90-88b9-e4d0-2b1e-6799f76cc71d" serial 14
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021/04/04 07:23:05 [TRACE] backend/local: reading remote state for workspace "default"
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/04/04 07:23:05 [TRACE] statemgr.Filesystem: read snapshot with lineage "47639f90-88b9-e4d0-2b1e-6799f76cc71d" serial 14
+2021/04/04 07:23:05 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/04/04 07:23:05 [TRACE] backend/local: building context for current working directory
+2021/04/04 07:23:05 [TRACE] terraform.NewContext: starting
+2021/04/04 07:23:05 [TRACE] terraform.NewContext: loading provider schemas
+2021/04/04 07:23:05 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2021-04-04T07:23:05.770+0530 [INFO]  plugin: configuring client automatic mTLS
+2021-04-04T07:23:05.819+0530 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5]
+2021-04-04T07:23:05.820+0530 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136734
+2021-04-04T07:23:05.820+0530 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5
+2021-04-04T07:23:05.839+0530 [INFO]  plugin.terraform-provider-google_v3.5.0_x5: configuring server automatic mTLS: timestamp=2021-04-04T07:23:05.839+0530
+2021-04-04T07:23:05.890+0530 [DEBUG] plugin: using plugin: version=5
+2021-04-04T07:23:05.891+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: plugin address: address=/tmp/plugin428496811 network=unix timestamp=2021-04-04T07:23:05.890+0530
+2021/04/04 07:23:05 [TRACE] GRPCProvider: GetSchema
+2021-04-04T07:23:05.996+0530 [TRACE] plugin.stdio: waiting for stdio data
+2021-04-04T07:23:05.997+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2021/04/04 07:23:06 [TRACE] No provider meta schema returned
+2021/04/04 07:23:06 [TRACE] GRPCProvider: Close
+2021-04-04T07:23:06.060+0530 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136734
+2021-04-04T07:23:06.060+0530 [DEBUG] plugin: plugin exited
+2021/04/04 07:23:06 [TRACE] terraform.NewContext: complete
+2021/04/04 07:23:06 [TRACE] backend/local: finished building terraform.Context
+2021/04/04 07:23:06 [TRACE] backend/local: requesting interactive input, if necessary
+2021/04/04 07:23:06 [TRACE] Context.Input: Prompting for provider arguments
+2021/04/04 07:23:06 [TRACE] Context.Input: Provider provider.google declared at main.tf:10,1-18
+2021/04/04 07:23:06 [TRACE] Context.Input: Input for provider.google: map[string]cty.Value{}
+2021/04/04 07:23:06 [TRACE] backend/local: running validation operation
+2021/04/04 07:23:06 [INFO] terraform: building graph: GraphTypeValidate
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/04/04 07:23:06 [TRACE] ConfigTransformer: Starting for path: 
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/04/04 07:23:06 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_instance.vm_instance" (*terraform.NodeValidatableResource) config from main.tf:25,1-49
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_instance.vm_instance
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_network.vpc_network" (*terraform.NodeValidatableResource) config from main.tf:19,1-48
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_network.vpc_network
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/04/04 07:23:06 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:10,1-18
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/04/04 07:23:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_instance.vm_instance
+2021/04/04 07:23:06 [DEBUG] ProviderTransformer: "google_compute_instance.vm_instance" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_network.vpc_network
+2021/04/04 07:23:06 [DEBUG] ProviderTransformer: "google_compute_network.vpc_network" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_instance.vm_instance
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_network.vpc_network
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "google_compute_network.vpc_network" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "var.environment" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "var.machine_types" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "google_compute_instance.vm_instance" references: [var.machine_types google_compute_network.vpc_network]
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+    var.environment - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [DEBUG] Starting graph walk: walkValidate
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "var.machine_types"
+2021/04/04 07:23:06 [TRACE] vertex "var.machine_types": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "var.environment"
+2021/04/04 07:23:06 [TRACE] vertex "var.environment": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:06 [TRACE] vertex "var.machine_types": visit complete
+2021-04-04T07:23:06.067+0530 [INFO]  plugin: configuring client automatic mTLS
+2021/04/04 07:23:06 [TRACE] vertex "var.environment": visit complete
+2021-04-04T07:23:06.111+0530 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5]
+2021-04-04T07:23:06.111+0530 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136743
+2021-04-04T07:23:06.111+0530 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5
+2021-04-04T07:23:06.131+0530 [INFO]  plugin.terraform-provider-google_v3.5.0_x5: configuring server automatic mTLS: timestamp=2021-04-04T07:23:06.130+0530
+2021-04-04T07:23:06.175+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: plugin address: address=/tmp/plugin707317838 network=unix timestamp=2021-04-04T07:23:06.175+0530
+2021-04-04T07:23:06.175+0530 [DEBUG] plugin: using plugin: version=5
+2021/04/04 07:23:06 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2021-04-04T07:23:06.265+0530 [TRACE] plugin.stdio: waiting for stdio data
+2021-04-04T07:23:06.269+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2021/04/04 07:23:06 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2021/04/04 07:23:06 [TRACE] GRPCProvider: GetSchema
+2021/04/04 07:23:06 [TRACE] No provider meta schema returned
+2021/04/04 07:23:06 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "google_compute_network.vpc_network"
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": starting visit (*terraform.NodeValidatableResource)
+2021/04/04 07:23:06 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance"
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_instance.vm_instance": starting visit (*terraform.NodeValidatableResource)
+2021/04/04 07:23:06 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_instance.vm_instance": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/04/04 07:23:06 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/04/04 07:23:06 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/04/04 07:23:06 [TRACE] GRPCProvider: Close
+2021-04-04T07:23:06.382+0530 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136743
+2021-04-04T07:23:06.382+0530 [DEBUG] plugin: plugin exited
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "root"
+2021/04/04 07:23:06 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/04/04 07:23:06 [TRACE] vertex "root": visit complete
+2021/04/04 07:23:06 [INFO] backend/local: apply calling Plan
+2021/04/04 07:23:06 [INFO] terraform: building graph: GraphTypePlan
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/04/04 07:23:06 [TRACE] ConfigTransformer: Starting for path: 
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/04/04 07:23:06 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_network.vpc_network (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:19,1-48
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_network.vpc_network (expand)
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_instance.vm_instance (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:25,1-49
+2021/04/04 07:23:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/04/04 07:23:06 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:10,1-18
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/04/04 07:23:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_network.vpc_network (expand)
+2021/04/04 07:23:06 [DEBUG] ProviderTransformer: "google_compute_network.vpc_network (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:06 [DEBUG] ProviderTransformer: "google_compute_instance.vm_instance (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/04/04 07:23:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_network.vpc_network (expand)
+2021/04/04 07:23:06 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "google_compute_network.vpc_network (expand)" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "google_compute_instance.vm_instance (expand)" references: [var.machine_types google_compute_network.vpc_network (expand)]
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "var.environment" references: []
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "var.machine_types" references: []
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/04/04 07:23:06 [TRACE] AttachDependenciesTransformer: google_compute_network.vpc_network depends on []
+2021/04/04 07:23:06 [TRACE] AttachDependenciesTransformer: google_compute_instance.vm_instance depends on [google_compute_network.vpc_network]
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/04/04 07:23:06 [TRACE] ForcedCBDTransformer: "google_compute_network.vpc_network (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/04/04 07:23:06 [TRACE] ForcedCBDTransformer: "google_compute_instance.vm_instance (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+    var.environment - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:06 [DEBUG] Starting graph walk: walkPlan
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "var.environment"
+2021/04/04 07:23:06 [TRACE] vertex "var.environment": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:06 [TRACE] vertex "var.environment": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "var.machine_types"
+2021/04/04 07:23:06 [TRACE] vertex "var.machine_types": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:06 [TRACE] vertex "var.machine_types": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-04-04T07:23:06.384+0530 [INFO]  plugin: configuring client automatic mTLS
+2021-04-04T07:23:06.428+0530 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5]
+2021-04-04T07:23:06.429+0530 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136752
+2021-04-04T07:23:06.429+0530 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5
+2021-04-04T07:23:06.452+0530 [INFO]  plugin.terraform-provider-google_v3.5.0_x5: configuring server automatic mTLS: timestamp=2021-04-04T07:23:06.452+0530
+2021-04-04T07:23:06.500+0530 [DEBUG] plugin: using plugin: version=5
+2021-04-04T07:23:06.500+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: plugin address: address=/tmp/plugin995672969 network=unix timestamp=2021-04-04T07:23:06.499+0530
+2021/04/04 07:23:06 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:06 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2021/04/04 07:23:06 [TRACE] GRPCProvider: GetSchema
+2021-04-04T07:23:06.594+0530 [TRACE] plugin.stdio: waiting for stdio data
+2021-04-04T07:23:06.596+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2021/04/04 07:23:06 [TRACE] No provider meta schema returned
+2021/04/04 07:23:06 [TRACE] GRPCProvider: Configure
+2021/04/04 07:23:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "google_compute_network.vpc_network (expand)"
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network (expand)": expanding dynamic subgraph
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network (expand)": entering dynamic subgraph
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "google_compute_network.vpc_network"
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": starting visit (*terraform.NodePlannableResource)
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": expanding dynamic subgraph
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2021/04/04 07:23:06 [TRACE] ResourceCountTransformer: adding google_compute_network.vpc_network as *terraform.NodePlannableResourceInstance
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_compute_network.vpc_network - *terraform.NodePlannableResourceInstance
+  ------
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/04/04 07:23:06 [DEBUG] ReferenceTransformer: "google_compute_network.vpc_network" references: []
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] Executing graph transform *terraform.RootTransformer
+2021/04/04 07:23:06 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": entering dynamic subgraph
+2021/04/04 07:23:06 [TRACE] dag/walk: visiting "google_compute_network.vpc_network"
+2021/04/04 07:23:06 [TRACE] vertex "google_compute_network.vpc_network": starting visit (*terraform.NodePlannableResourceInstance)
+2021/04/04 07:23:06 [TRACE] ReadResourceInstanceState: reading state for google_compute_network.vpc_network
+2021/04/04 07:23:06 [TRACE] UpgradeResourceState: schema version of google_compute_network.vpc_network is still 0; calling provider "google" for any other minor fixups
+2021/04/04 07:23:06 [TRACE] GRPCProvider: UpgradeResourceState
+2021-04-04T07:23:06.657+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Authenticating using configured Google JSON 'credentials'...
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control https://www.googleapis.com/auth/userinfo.email]
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating GCE client for path https://www.googleapis.com/compute/v1/projects/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating GCE Beta client for path https://www.googleapis.com/compute/beta/projects/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating GKE client for path https://container.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating GKE Beta client for path https://container.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud DNS client for path https://www.googleapis.com/dns/v1/projects/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud DNS Beta client for path https://www.googleapis.com/dns/v1beta2/projects/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud KMS client for path https://cloudkms.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Stackdriver Logging client for path https://logging.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Storage client for path https://www.googleapis.com/storage/v1/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google SqlAdmin client for path https://www.googleapis.com/sql/v1beta4/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Pubsub client for path https://pubsub.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Dataflow client for path https://dataflow.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud ResourceManager client for path https://cloudresourcemanager.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud ResourceManager V client for path https://cloudresourcemanager.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Runtimeconfig client for path https://runtimeconfig.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud IAM client for path https://iam.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud IAMCredentials client for path https://iamcredentials.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Service Management client for path https://servicemanagement.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Service Usage client for path https://serviceusage.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Billing client for path https://cloudbilling.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Build client for path https://cloudbuild.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud BigQuery client for path https://www.googleapis.com/bigquery/v2/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud BigtableAdmin for path https://bigtableadmin.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Source Repo client for path https://sourcerepo.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Spanner client for path https://spanner.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Dataproc client for path https://dataproc.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Dataproc Beta client for path https://dataproc.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Filestore client for path https://file.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud IoT Core client for path https://cloudiot.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating App Engine client for path https://appengine.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Cloud Composer client for path https://composer.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Service Networking client for path https://servicenetworking.googleapis.com/
+2021-04-04T07:23:06.660+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [INFO] Instantiating Google Cloud Storage Transfer client for path https://storagetransfer.googleapis.com/
+2021/04/04 07:23:06 [TRACE] GRPCProvider: ReadResource
+2021-04-04T07:23:06.666+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:06 [DEBUG] Waiting for state to become: [success]
+2021/04/04 07:23:07 [TRACE] EvalWriteState: using RefreshState for google_compute_network.vpc_network
+2021/04/04 07:23:07 [TRACE] EvalWriteState: recording 0 dependencies for google_compute_network.vpc_network
+2021/04/04 07:23:07 [TRACE] EvalWriteState: writing current state object for google_compute_network.vpc_network
+2021/04/04 07:23:07 [TRACE] Re-validating config for "google_compute_network.vpc_network"
+2021/04/04 07:23:07 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/04/04 07:23:07 [TRACE] GRPCProvider: PlanResourceChange
+2021/04/04 07:23:07 [TRACE] EvalWriteState: writing current state object for google_compute_network.vpc_network
+2021/04/04 07:23:07 [TRACE] EvalWriteDiff: recorded NoOp change for google_compute_network.vpc_network
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_network.vpc_network": visit complete
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_network.vpc_network": dynamic subgraph completed successfully
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_network.vpc_network": visit complete
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_network.vpc_network (expand)": dynamic subgraph completed successfully
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_network.vpc_network (expand)": visit complete
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance (expand)"
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance (expand)": expanding dynamic subgraph
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance (expand)": entering dynamic subgraph
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance"
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": starting visit (*terraform.NodePlannableResource)
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": expanding dynamic subgraph
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2021/04/04 07:23:07 [TRACE] ResourceCountTransformer: adding google_compute_instance.vm_instance as *terraform.NodePlannableResourceInstance
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodePlannableResourceInstance
+  ------
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/04/04 07:23:07 [INFO] ReferenceTransformer: reference not found: "var.machine_types"
+2021/04/04 07:23:07 [DEBUG] ReferenceTransformer: "google_compute_instance.vm_instance" references: []
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/04/04 07:23:07 [TRACE] Executing graph transform *terraform.RootTransformer
+2021/04/04 07:23:07 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": entering dynamic subgraph
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance"
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": starting visit (*terraform.NodePlannableResourceInstance)
+2021/04/04 07:23:07 [TRACE] ReadResourceInstanceState: reading state for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] UpgradeResourceState: schema version of google_compute_instance.vm_instance is still 6; calling provider "google" for any other minor fixups
+2021/04/04 07:23:07 [TRACE] GRPCProvider: UpgradeResourceState
+2021/04/04 07:23:07 [TRACE] GRPCProvider: ReadResource
+2021/04/04 07:23:07 [TRACE] EvalWriteState: using RefreshState for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] EvalWriteState: recording 1 dependencies for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] EvalWriteState: writing current state object for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] Re-validating config for "google_compute_instance.vm_instance"
+2021/04/04 07:23:07 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/04/04 07:23:07 [TRACE] GRPCProvider: PlanResourceChange
+2021/04/04 07:23:07 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_compute_instance.vm_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .scheduling: block count in plan (1) disagrees with count in config (0)
+      - .shielded_instance_config: block count in plan (1) disagrees with count in config (0)
+2021/04/04 07:23:07 [TRACE] EvalWriteState: writing current state object for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] EvalWriteDiff: recorded Update change for google_compute_instance.vm_instance
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": visit complete
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": dynamic subgraph completed successfully
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance": visit complete
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance (expand)": dynamic subgraph completed successfully
+2021/04/04 07:23:07 [TRACE] vertex "google_compute_instance.vm_instance (expand)": visit complete
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/04/04 07:23:07 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/04/04 07:23:07 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2021/04/04 07:23:07 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/04/04 07:23:07 [TRACE] GRPCProvider: Close
+2021-04-04T07:23:07.772+0530 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136752
+2021-04-04T07:23:07.772+0530 [DEBUG] plugin: plugin exited
+2021/04/04 07:23:07 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2021/04/04 07:23:07 [TRACE] dag/walk: visiting "root"
+2021/04/04 07:23:07 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/04/04 07:23:07 [TRACE] vertex "root": visit complete
+2021/04/04 07:23:07 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2021/04/04 07:23:09 [INFO] backend/local: apply calling Apply
+2021/04/04 07:23:09 [INFO] terraform: building graph: GraphTypeApply
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/04/04 07:23:09 [TRACE] ConfigTransformer: Starting for path: 
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.DiffTransformer
+2021/04/04 07:23:09 [TRACE] DiffTransformer starting
+2021/04/04 07:23:09 [TRACE] DiffTransformer: found NoOp change for google_compute_network.vpc_network 
+2021/04/04 07:23:09 [TRACE] DiffTransformer: found Update change for google_compute_instance.vm_instance 
+2021/04/04 07:23:09 [TRACE] DiffTransformer: google_compute_instance.vm_instance will be represented by google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] DiffTransformer complete
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_network.vpc_network (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:19,1-48
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_network.vpc_network (expand)
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_instance.vm_instance" (*terraform.NodeApplyableResourceInstance) config from main.tf:25,1-49
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching to "google_compute_instance.vm_instance (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:25,1-49
+2021/04/04 07:23:09 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/04/04 07:23:09 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:10,1-18
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/04/04 07:23:09 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:09 [DEBUG] ProviderTransformer: "google_compute_instance.vm_instance (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:09 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_network.vpc_network (expand)
+2021/04/04 07:23:09 [DEBUG] ProviderTransformer: "google_compute_network.vpc_network (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:09 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_compute_instance.vm_instance
+2021/04/04 07:23:09 [DEBUG] ProviderTransformer: "google_compute_instance.vm_instance" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/04/04 07:23:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/04/04 07:23:09 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:09 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_instance.vm_instance (expand)
+2021/04/04 07:23:09 [TRACE] AttachSchemaTransformer: attaching resource schema to google_compute_network.vpc_network (expand)
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "var.machine_types" references: []
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "google_compute_instance.vm_instance" references: [var.machine_types google_compute_network.vpc_network (expand)]
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "google_compute_instance.vm_instance (expand)" references: []
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "google_compute_network.vpc_network (expand)" references: []
+2021/04/04 07:23:09 [DEBUG] ReferenceTransformer: "var.environment" references: []
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/04/04 07:23:09 [TRACE] AttachDependenciesTransformer: google_compute_instance.vm_instance depends on [google_compute_network.vpc_network]
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/04/04 07:23:09 [TRACE] ForcedCBDTransformer: "google_compute_instance.vm_instance" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.environment - *terraform.NodeRootVariable
+    var.machine_types - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/04/04 07:23:09 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    var.machine_types - *terraform.NodeRootVariable
+  google_compute_instance.vm_instance (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_compute_network.vpc_network (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+    var.environment - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_compute_instance.vm_instance - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.environment - *terraform.NodeRootVariable
+  var.machine_types - *terraform.NodeRootVariable
+  ------
+2021/04/04 07:23:09 [DEBUG] Starting graph walk: walkApply
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "var.machine_types"
+2021/04/04 07:23:09 [TRACE] vertex "var.machine_types": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:09 [TRACE] vertex "var.machine_types": visit complete
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "var.environment"
+2021/04/04 07:23:09 [TRACE] vertex "var.environment": starting visit (*terraform.NodeRootVariable)
+2021/04/04 07:23:09 [TRACE] vertex "var.environment": visit complete
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2021/04/04 07:23:09 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-04-04T07:23:09.690+0530 [INFO]  plugin: configuring client automatic mTLS
+2021-04-04T07:23:09.731+0530 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5]
+2021-04-04T07:23:09.748+0530 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136762
+2021-04-04T07:23:09.748+0530 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5
+2021-04-04T07:23:09.756+0530 [INFO]  plugin.terraform-provider-google_v3.5.0_x5: configuring server automatic mTLS: timestamp=2021-04-04T07:23:09.756+0530
+2021-04-04T07:23:09.832+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: plugin address: address=/tmp/plugin478365906 network=unix timestamp=2021-04-04T07:23:09.832+0530
+2021-04-04T07:23:09.832+0530 [DEBUG] plugin: using plugin: version=5
+2021/04/04 07:23:09 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2021/04/04 07:23:09 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2021/04/04 07:23:09 [TRACE] GRPCProvider: GetSchema
+2021-04-04T07:23:09.912+0530 [TRACE] plugin.stdio: waiting for stdio data
+2021-04-04T07:23:09.913+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2021/04/04 07:23:09 [TRACE] No provider meta schema returned
+2021/04/04 07:23:09 [TRACE] GRPCProvider: Configure
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Authenticating using configured Google JSON 'credentials'...
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control https://www.googleapis.com/auth/userinfo.email]
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating GCE client for path https://www.googleapis.com/compute/v1/projects/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating GCE Beta client for path https://www.googleapis.com/compute/beta/projects/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating GKE client for path https://container.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating GKE Beta client for path https://container.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud DNS client for path https://www.googleapis.com/dns/v1/projects/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud DNS Beta client for path https://www.googleapis.com/dns/v1beta2/projects/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud KMS client for path https://cloudkms.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Stackdriver Logging client for path https://logging.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Storage client for path https://www.googleapis.com/storage/v1/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google SqlAdmin client for path https://www.googleapis.com/sql/v1beta4/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Pubsub client for path https://pubsub.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Dataflow client for path https://dataflow.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud ResourceManager client for path https://cloudresourcemanager.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud ResourceManager V client for path https://cloudresourcemanager.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Runtimeconfig client for path https://runtimeconfig.googleapis.com/
+2021-04-04T07:23:09.965+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud IAM client for path https://iam.googleapis.com/
+2021-04-04T07:23:09.966+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud IAMCredentials client for path https://iamcredentials.googleapis.com/
+2021-04-04T07:23:09.966+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Service Management client for path https://servicemanagement.googleapis.com/
+2021-04-04T07:23:09.966+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Service Usage client for path https://serviceusage.googleapis.com/
+2021/04/04 07:23:09 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance (expand)"
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance (expand)": expanding dynamic subgraph
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance (expand)": entering dynamic subgraph
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance"
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance": starting visit (*terraform.NodeApplyableResource)
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance": visit complete
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance (expand)": dynamic subgraph completed successfully
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance (expand)": visit complete
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "google_compute_network.vpc_network (expand)"
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network (expand)": expanding dynamic subgraph
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network (expand)": entering dynamic subgraph
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "google_compute_network.vpc_network"
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network": starting visit (*terraform.NodeApplyableResource)
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network": visit complete
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network (expand)": dynamic subgraph completed successfully
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_network.vpc_network (expand)": visit complete
+2021/04/04 07:23:09 [TRACE] dag/walk: visiting "google_compute_instance.vm_instance"
+2021/04/04 07:23:09 [TRACE] vertex "google_compute_instance.vm_instance": starting visit (*terraform.NodeApplyableResourceInstance)
+2021/04/04 07:23:09 [TRACE] EvalReadDiff: Read Update change from plan for google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] EvalReadState: reading state for google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] UpgradeResourceState: schema version of google_compute_instance.vm_instance is still 6; calling provider "google" for any other minor fixups
+2021/04/04 07:23:09 [TRACE] GRPCProvider: UpgradeResourceState
+2021/04/04 07:23:09 [TRACE] EvalReadDiff: Read Update change from plan for google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] Re-validating config for "google_compute_instance.vm_instance"
+2021/04/04 07:23:09 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Billing client for path https://cloudbilling.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Build client for path https://cloudbuild.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud BigQuery client for path https://www.googleapis.com/bigquery/v2/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud BigtableAdmin for path https://bigtableadmin.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Source Repo client for path https://sourcerepo.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Spanner client for path https://spanner.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Dataproc client for path https://dataproc.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Dataproc Beta client for path https://dataproc.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Filestore client for path https://file.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud IoT Core client for path https://cloudiot.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating App Engine client for path https://appengine.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Cloud Composer client for path https://composer.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Service Networking client for path https://servicenetworking.googleapis.com/
+2021-04-04T07:23:09.972+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 2021/04/04 07:23:09 [INFO] Instantiating Google Cloud Storage Transfer client for path https://storagetransfer.googleapis.com/
+2021/04/04 07:23:09 [TRACE] GRPCProvider: PlanResourceChange
+2021/04/04 07:23:09 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_compute_instance.vm_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .shielded_instance_config: block count in plan (1) disagrees with count in config (0)
+      - .scheduling: block count in plan (1) disagrees with count in config (0)
+2021/04/04 07:23:09 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Update) matches planned change (action Update)
+2021/04/04 07:23:09 [TRACE] EvalReadState: reading state for google_compute_instance.vm_instance
+2021/04/04 07:23:09 [TRACE] UpgradeResourceState: schema version of google_compute_instance.vm_instance is still 6; calling provider "google" for any other minor fixups
+2021/04/04 07:23:09 [TRACE] GRPCProvider: UpgradeResourceState
+2021/04/04 07:23:09 [DEBUG] EvalApply: ProviderMeta config value set
+2021/04/04 07:23:09 [DEBUG] google_compute_instance.vm_instance: applying the planned Update change
+2021/04/04 07:23:09 [TRACE] GRPCProvider: ApplyResourceChange
+2021/04/04 07:23:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_compute_instance.vm_instance"
+2021/04/04 07:23:14 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_compute_instance.vm_instance"
+2021/04/04 07:23:14 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2021/04/04 07:23:19 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2021/04/04 07:23:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_compute_instance.vm_instance"
+2021/04/04 07:23:19 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_compute_instance.vm_instance"
+2021-04-04T07:23:20.030+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: panic: runtime error: invalid memory address or nil pointer dereference
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: [signal SIGSEGV: segmentation violation code=0x1 addr=0xe8 pc=0x197f9ca]
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: goroutine 34 [running]:
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: github.com/terraform-providers/terraform-provider-google/google.resourceComputeInstanceUpdate(0xc0001fcc40, 0x1fb0f00, 0xc0000e0680, 0x0, 0x0)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/google/resource_compute_instance.go:966 +0x699a
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc000018180, 0xc0000bce60, 0xc0007051c0, 0x1fb0f00, 0xc0000e0680, 0xc0005ae001, 0xc000733710, 0x40eac3)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.4.0/helper/schema/resource.go:311 +0x263
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc0001a5380, 0xc000201918, 0xc0000bce60, 0xc0007051c0, 0xc0004e5168, 0xc0008113c8, 0x1ef5de0)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.4.0/helper/schema/provider.go:294 +0x99
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc00000e330, 0x2786880, 0xc00022c3f0, 0xc0000a7800, 0xc00000e330, 0xc00022c3f0, 0xc0006dfa80)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.4.0/internal/helper/plugin/grpc_provider.go:885 +0x882
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x22e60a0, 0xc00000e330, 0x2786880, 0xc00022c3f0, 0xc0000a77a0, 0x0, 0x2786880, 0xc00022c3f0, 0xc00047e000, 0x112b)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.4.0/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000032420, 0x27b8a40, 0xc00025e300, 0xc0006e4200, 0xc000658b10, 0x353e0a0, 0x0, 0x0, 0x0)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:995 +0x460
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000032420, 0x27b8a40, 0xc00025e300, 0xc0006e4200, 0x0)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:1275 +0xd97
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00009eca0, 0xc000032420, 0x27b8a40, 0xc00025e300, 0xc0006e4200)
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:710 +0xbb
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-04-04T07:23:20.032+0530 [DEBUG] plugin.terraform-provider-google_v3.5.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:708 +0xa1
+2021-04-04T07:23:20.037+0530 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/linux_amd64/terraform-provider-google_v3.5.0_x5 pid=136762 error="exit status 2"
+2021/04/04 07:23:20 [DEBUG] google_compute_instance.vm_instance: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Canceled desc = context canceled
+2021/04/04 07:23:20 [TRACE] EvalWriteState: recording 1 dependencies for google_compute_instance.vm_instance
+2021/04/04 07:23:20 [TRACE] EvalWriteState: writing current state object for google_compute_instance.vm_instance
+2021/04/04 07:23:20 [TRACE] EvalApplyProvisioners: google_compute_instance.vm_instance is not freshly-created, so no provisioning is required
+2021/04/04 07:23:20 [TRACE] EvalWriteState: recording 1 dependencies for google_compute_instance.vm_instance
+2021/04/04 07:23:20 [TRACE] EvalWriteState: writing current state object for google_compute_instance.vm_instance
+2021/04/04 07:23:20 [TRACE] vertex "google_compute_instance.vm_instance": visit complete
+2021/04/04 07:23:20 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/google\"] (close)" errored, so skipping
+2021/04/04 07:23:20 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021/04/04 07:23:20 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021/04/04 07:23:20 [TRACE] statemgr.Filesystem: creating backup snapshot at terraform.tfstate.backup
+2021/04/04 07:23:20 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 15
+2021/04/04 07:23:20 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021/04/04 07:23:20 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2021/04/04 07:23:20 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2021-04-04T07:23:20.071+0530 [DEBUG] plugin: plugin exited
